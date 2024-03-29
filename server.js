@@ -4,6 +4,12 @@ const path= require('path')
 require("dotenv").config()
 const app= express()
 const cors= require("cors")
+require('express-async-errors');
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ message: 'Internal Server Error' });
+});
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use('/images', express.static('public/uploads'))
