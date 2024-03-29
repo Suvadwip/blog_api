@@ -18,8 +18,8 @@ app.use(
 
 app.use(cors());
 
-const port = process.env.PORT || 3000;
-const dbDriver = process.env.MONGO_DB_URL;
+// const port = process.env.PORT || 3000;
+const dbDriver = "mongodb+srv://suvadwip:suva99325@cluster0.htxebdn.mongodb.net/blogApi";
 
 const authRouter = require("./routes/auth.routes");
 app.use(authRouter);
