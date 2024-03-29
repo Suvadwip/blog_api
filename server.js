@@ -20,14 +20,15 @@ app.use(cors());
 
 const port = process.env.PORT || 3000;
 const dbDriver = process.env.MONGO_DB_URL;
+
 const authRouter = require("./routes/auth.routes");
 app.use(authRouter);
-const categoriesRouter = require("./routes/categories.routes");
-app.use(categoriesRouter);
 const postRouter = require("./routes/posts.routes");
 app.use(postRouter);
 const userRouter = require("./routes/users.routes");
 app.use("/user", userRouter);
+const categoriesRouter = require("./routes/categories.routes");
+app.use(categoriesRouter);
 
 mongoose
   .connect(dbDriver, {
