@@ -78,6 +78,7 @@ class userController {
             if (updateData && updateData._id) {
               return res.status(200).json({
                 message: "Data updated successfully",
+                data:updateData
               });
             } else {
               return res.status(404).json({

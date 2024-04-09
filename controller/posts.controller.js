@@ -93,12 +93,12 @@ class postController {
       req.body.title = req.body.title;
       req.body.desc = req.body.desc;
       //req.body.image = req.body.image;
-      // req.body.username = req.body.username;
+      //  req.body.username = req.body.username;
       //  req.body.categories = req.body.categories;
       if (
         !req.body.title ||
         !req.body.desc  
-        // !req.body.username ||
+        //  !req.body.username ||
         //  !req.body.categories
       ) {
         return res.status(404).json({

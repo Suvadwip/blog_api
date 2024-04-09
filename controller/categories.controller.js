@@ -1,6 +1,7 @@
 const categoryModel= require("../model/category.model")
 class categoryController{
     async categoryCreate(req,res){
+        console.log(req.body);
         try {
             let saveCategory= await categoryModel.create(req.body)
             if(saveCategory){
